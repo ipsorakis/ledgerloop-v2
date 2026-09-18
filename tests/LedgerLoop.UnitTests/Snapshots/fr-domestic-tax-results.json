@@ -1,0 +1,485 @@
+{
+  "01-domestic-standard-rate": {
+    "documentNumber": "GOLD-0000",
+    "documentKind": "Invoice",
+    "currency": "EUR",
+    "invoiceDate": "2024-02-01",
+    "taxTreatment": "DOMESTIC",
+    "calculatorVersion": "3.2",
+    "manualOverrideApplied": false,
+    "netAmount": 299.97,
+    "taxAmount": 59.99,
+    "grossAmount": 359.96,
+    "postingAdjustment": 0,
+    "lines": [
+      {
+        "lineNumber": 1,
+        "description": "Advisory day",
+        "category": "ProfessionalServices",
+        "quantity": 3,
+        "unitPrice": 99.99,
+        "ratePercent": 20.0,
+        "netAmount": 299.97,
+        "taxAmount": 59.99,
+        "grossAmount": 359.96,
+        "treatmentCode": "DOMESTIC"
+      }
+    ]
+  },
+  "02-mixed-rates": {
+    "documentNumber": "GOLD-0000",
+    "documentKind": "Invoice",
+    "currency": "EUR",
+    "invoiceDate": "2024-03-04",
+    "taxTreatment": "DOMESTIC",
+    "calculatorVersion": "3.2",
+    "manualOverrideApplied": false,
+    "netAmount": 727.40,
+    "taxAmount": 120.50,
+    "grossAmount": 847.90,
+    "postingAdjustment": 0,
+    "lines": [
+      {
+        "lineNumber": 1,
+        "description": "Shelving units",
+        "category": "StandardGoods",
+        "quantity": 2,
+        "unitPrice": 250.0,
+        "ratePercent": 20.0,
+        "netAmount": 500.0,
+        "taxAmount": 100.00,
+        "grossAmount": 600.00,
+        "treatmentCode": "DOMESTIC"
+      },
+      {
+        "lineNumber": 2,
+        "description": "Recipe handbook",
+        "category": "PrintedBooks",
+        "quantity": 10,
+        "unitPrice": 19.9,
+        "ratePercent": 10.0,
+        "netAmount": 199.0,
+        "taxAmount": 19.90,
+        "grossAmount": 218.90,
+        "treatmentCode": "DOMESTIC"
+      },
+      {
+        "lineNumber": 3,
+        "description": "Flour sacks",
+        "category": "FoodStaples",
+        "quantity": 8,
+        "unitPrice": 3.55,
+        "ratePercent": 2.1,
+        "netAmount": 28.40,
+        "taxAmount": 0.60,
+        "grossAmount": 29.00,
+        "treatmentCode": "DOMESTIC"
+      }
+    ]
+  },
+  "03-reduced-rate": {
+    "documentNumber": "GOLD-0000",
+    "documentKind": "Invoice",
+    "currency": "EUR",
+    "invoiceDate": "2024-03-11",
+    "taxTreatment": "DOMESTIC",
+    "calculatorVersion": "3.2",
+    "manualOverrideApplied": false,
+    "netAmount": 500.0,
+    "taxAmount": 50.00,
+    "grossAmount": 550.00,
+    "postingAdjustment": 0,
+    "lines": [
+      {
+        "lineNumber": 1,
+        "description": "Trade paperback",
+        "category": "PrintedBooks",
+        "quantity": 40,
+        "unitPrice": 12.5,
+        "ratePercent": 10.0,
+        "netAmount": 500.0,
+        "taxAmount": 50.00,
+        "grossAmount": 550.00,
+        "treatmentCode": "DOMESTIC"
+      }
+    ]
+  },
+  "06-eu-customer-without-usable-tax-id": {
+    "documentNumber": "GOLD-0000",
+    "documentKind": "Invoice",
+    "currency": "EUR",
+    "invoiceDate": "2024-01-18",
+    "taxTreatment": "DOMESTIC",
+    "calculatorVersion": "3.2",
+    "manualOverrideApplied": false,
+    "netAmount": 579.00,
+    "taxAmount": 66.40,
+    "grossAmount": 645.40,
+    "postingAdjustment": 0,
+    "lines": [
+      {
+        "lineNumber": 1,
+        "description": "Sterile dressing packs",
+        "category": "MedicalSupplies",
+        "quantity": 40,
+        "unitPrice": 12.35,
+        "ratePercent": 10.0,
+        "netAmount": 494.00,
+        "taxAmount": 49.40,
+        "grossAmount": 543.40,
+        "treatmentCode": "DOMESTIC"
+      },
+      {
+        "lineNumber": 2,
+        "description": "Cold chain transport",
+        "category": "Shipping",
+        "quantity": 1,
+        "unitPrice": 85.0,
+        "ratePercent": 20.0,
+        "netAmount": 85.0,
+        "taxAmount": 17.00,
+        "grossAmount": 102.00,
+        "treatmentCode": "DOMESTIC"
+      }
+    ]
+  },
+  "07-inclusive-pricing": {
+    "documentNumber": "GOLD-0000",
+    "documentKind": "Invoice",
+    "currency": "EUR",
+    "invoiceDate": "2024-02-20",
+    "taxTreatment": "DOMESTIC",
+    "calculatorVersion": "3.2",
+    "manualOverrideApplied": false,
+    "netAmount": 171.78,
+    "taxAmount": 18.00,
+    "grossAmount": 189.78,
+    "postingAdjustment": 0,
+    "lines": [
+      {
+        "lineNumber": 1,
+        "description": "Printed handbook",
+        "category": "PrintedBooks",
+        "quantity": 12,
+        "unitPrice": 14.99,
+        "ratePercent": 10.0,
+        "netAmount": 163.53,
+        "taxAmount": 16.35,
+        "grossAmount": 179.88,
+        "treatmentCode": "DOMESTIC"
+      },
+      {
+        "lineNumber": 2,
+        "description": "Delivery",
+        "category": "Shipping",
+        "quantity": 1,
+        "unitPrice": 9.9,
+        "ratePercent": 20.0,
+        "netAmount": 8.25,
+        "taxAmount": 1.65,
+        "grossAmount": 9.9,
+        "treatmentCode": "DOMESTIC"
+      }
+    ]
+  },
+  "08-exclusive-pricing": {
+    "documentNumber": "GOLD-0000",
+    "documentKind": "Invoice",
+    "currency": "EUR",
+    "invoiceDate": "2024-02-20",
+    "taxTreatment": "DOMESTIC",
+    "calculatorVersion": "3.2",
+    "manualOverrideApplied": false,
+    "netAmount": 189.78,
+    "taxAmount": 19.97,
+    "grossAmount": 209.75,
+    "postingAdjustment": 0,
+    "lines": [
+      {
+        "lineNumber": 1,
+        "description": "Printed handbook",
+        "category": "PrintedBooks",
+        "quantity": 12,
+        "unitPrice": 14.99,
+        "ratePercent": 10.0,
+        "netAmount": 179.88,
+        "taxAmount": 17.99,
+        "grossAmount": 197.87,
+        "treatmentCode": "DOMESTIC"
+      },
+      {
+        "lineNumber": 2,
+        "description": "Delivery",
+        "category": "Shipping",
+        "quantity": 1,
+        "unitPrice": 9.9,
+        "ratePercent": 20.0,
+        "netAmount": 9.9,
+        "taxAmount": 1.98,
+        "grossAmount": 11.88,
+        "treatmentCode": "DOMESTIC"
+      }
+    ]
+  },
+  "09-per-line-discount": {
+    "documentNumber": "GOLD-0000",
+    "documentKind": "Invoice",
+    "currency": "EUR",
+    "invoiceDate": "2024-05-02",
+    "taxTreatment": "DOMESTIC",
+    "calculatorVersion": "3.2",
+    "manualOverrideApplied": false,
+    "netAmount": 4100.75,
+    "taxAmount": 820.15,
+    "grossAmount": 4920.90,
+    "postingAdjustment": 0,
+    "lines": [
+      {
+        "lineNumber": 1,
+        "description": "Integration engineering",
+        "category": "ProfessionalServices",
+        "quantity": 24,
+        "unitPrice": 118.0,
+        "ratePercent": 20.0,
+        "netAmount": 2832.0,
+        "taxAmount": 566.40,
+        "grossAmount": 3398.40,
+        "treatmentCode": "DOMESTIC"
+      },
+      {
+        "lineNumber": 2,
+        "description": "Connector licence",
+        "category": "DigitalServices",
+        "quantity": 1,
+        "unitPrice": 1450.0,
+        "ratePercent": 20.0,
+        "netAmount": 1268.75,
+        "taxAmount": 253.75,
+        "grossAmount": 1522.50,
+        "treatmentCode": "DOMESTIC"
+      }
+    ]
+  },
+  "10-invoice-level-discount": {
+    "documentNumber": "GOLD-0000",
+    "documentKind": "Invoice",
+    "currency": "EUR",
+    "invoiceDate": "2024-05-14",
+    "taxTreatment": "DOMESTIC",
+    "calculatorVersion": "3.2",
+    "manualOverrideApplied": false,
+    "netAmount": 2486.40,
+    "taxAmount": 497.28,
+    "grossAmount": 2983.68,
+    "postingAdjustment": 0,
+    "lines": [
+      {
+        "lineNumber": 1,
+        "description": "Managed service",
+        "category": "DigitalServices",
+        "quantity": 12,
+        "unitPrice": 149.0,
+        "ratePercent": 20.0,
+        "netAmount": 1653.90,
+        "taxAmount": 330.78,
+        "grossAmount": 1984.68,
+        "treatmentCode": "DOMESTIC"
+      },
+      {
+        "lineNumber": 2,
+        "description": "Support retainer",
+        "category": "ProfessionalServices",
+        "quantity": 1,
+        "unitPrice": 900.0,
+        "ratePercent": 20.0,
+        "netAmount": 832.50,
+        "taxAmount": 166.50,
+        "grossAmount": 999.00,
+        "treatmentCode": "DOMESTIC"
+      }
+    ]
+  },
+  "11-credit-note": {
+    "documentNumber": "GOLD-0000",
+    "documentKind": "CreditNote",
+    "currency": "EUR",
+    "invoiceDate": "2022-03-14",
+    "taxTreatment": "DOMESTIC",
+    "calculatorVersion": "3.2",
+    "manualOverrideApplied": false,
+    "netAmount": -320.0,
+    "taxAmount": -64.00,
+    "grossAmount": -384.00,
+    "postingAdjustment": 0,
+    "lines": [
+      {
+        "lineNumber": 1,
+        "description": "Onboarding workshop",
+        "category": "ProfessionalServices",
+        "quantity": 1,
+        "unitPrice": 320.0,
+        "ratePercent": 20.0,
+        "netAmount": -320.0,
+        "taxAmount": -64.00,
+        "grossAmount": -384.00,
+        "treatmentCode": "DOMESTIC"
+      }
+    ]
+  },
+  "12-historical-reduced-rate": {
+    "documentNumber": "GOLD-0000",
+    "documentKind": "Invoice",
+    "currency": "EUR",
+    "invoiceDate": "2022-05-09",
+    "taxTreatment": "DOMESTIC",
+    "calculatorVersion": "3.2",
+    "manualOverrideApplied": false,
+    "netAmount": 500.0,
+    "taxAmount": 35.00,
+    "grossAmount": 535.00,
+    "postingAdjustment": 0,
+    "lines": [
+      {
+        "lineNumber": 1,
+        "description": "Trade paperback",
+        "category": "PrintedBooks",
+        "quantity": 40,
+        "unitPrice": 12.5,
+        "ratePercent": 7.0,
+        "netAmount": 500.0,
+        "taxAmount": 35.00,
+        "grossAmount": 535.00,
+        "treatmentCode": "DOMESTIC"
+      }
+    ]
+  },
+  "13-manual-tax-amount": {
+    "documentNumber": "GOLD-0000",
+    "documentKind": "Invoice",
+    "currency": "EUR",
+    "invoiceDate": "2024-07-01",
+    "taxTreatment": "DOMESTIC",
+    "calculatorVersion": "3.2",
+    "manualOverrideApplied": true,
+    "netAmount": 6240.0,
+    "taxAmount": 1150.0,
+    "grossAmount": 7390.0,
+    "postingAdjustment": 0,
+    "lines": [
+      {
+        "lineNumber": 1,
+        "description": "Annual platform fee",
+        "category": "DigitalServices",
+        "quantity": 1,
+        "unitPrice": 4800.0,
+        "ratePercent": 20.0,
+        "netAmount": 4800.0,
+        "taxAmount": 960.00,
+        "grossAmount": 5760.00,
+        "treatmentCode": "DOMESTIC"
+      },
+      {
+        "lineNumber": 2,
+        "description": "Data migration",
+        "category": "ProfessionalServices",
+        "quantity": 6,
+        "unitPrice": 240.0,
+        "ratePercent": 20.0,
+        "netAmount": 1440.0,
+        "taxAmount": 288.00,
+        "grossAmount": 1728.00,
+        "treatmentCode": "DOMESTIC"
+      }
+    ]
+  },
+  "14-rounding-edge-case": {
+    "documentNumber": "GOLD-0000",
+    "documentKind": "Invoice",
+    "currency": "EUR",
+    "invoiceDate": "2024-08-06",
+    "taxTreatment": "DOMESTIC",
+    "calculatorVersion": "3.2",
+    "manualOverrideApplied": false,
+    "netAmount": 10.14,
+    "taxAmount": 2.03,
+    "grossAmount": 12.17,
+    "postingAdjustment": 0,
+    "lines": [
+      {
+        "lineNumber": 1,
+        "description": "Fastener pack",
+        "category": "StandardGoods",
+        "quantity": 3,
+        "unitPrice": 3.335,
+        "ratePercent": 20.0,
+        "netAmount": 10.01,
+        "taxAmount": 2.00,
+        "grossAmount": 12.01,
+        "treatmentCode": "DOMESTIC"
+      },
+      {
+        "lineNumber": 2,
+        "description": "Assembly labour",
+        "category": "ProfessionalServices",
+        "quantity": 1,
+        "unitPrice": 0.125,
+        "ratePercent": 20.0,
+        "netAmount": 0.13,
+        "taxAmount": 0.03,
+        "grossAmount": 0.16,
+        "treatmentCode": "DOMESTIC"
+      }
+    ]
+  },
+  "15-one-cent-sensitive-total": {
+    "documentNumber": "GOLD-0000",
+    "documentKind": "Invoice",
+    "currency": "EUR",
+    "invoiceDate": "2024-09-02",
+    "taxTreatment": "DOMESTIC",
+    "calculatorVersion": "3.2",
+    "manualOverrideApplied": false,
+    "netAmount": 165.0,
+    "taxAmount": 3.48,
+    "grossAmount": 168.48,
+    "postingAdjustment": 0,
+    "lines": [
+      {
+        "lineNumber": 1,
+        "description": "Flour, 25kg",
+        "category": "FoodStaples",
+        "quantity": 1,
+        "unitPrice": 55.0,
+        "ratePercent": 2.1,
+        "netAmount": 55.0,
+        "taxAmount": 1.16,
+        "grossAmount": 56.16,
+        "treatmentCode": "DOMESTIC"
+      },
+      {
+        "lineNumber": 2,
+        "description": "Sugar, 25kg",
+        "category": "FoodStaples",
+        "quantity": 1,
+        "unitPrice": 55.0,
+        "ratePercent": 2.1,
+        "netAmount": 55.0,
+        "taxAmount": 1.16,
+        "grossAmount": 56.16,
+        "treatmentCode": "DOMESTIC"
+      },
+      {
+        "lineNumber": 3,
+        "description": "Rice, 25kg",
+        "category": "FoodStaples",
+        "quantity": 1,
+        "unitPrice": 55.0,
+        "ratePercent": 2.1,
+        "netAmount": 55.0,
+        "taxAmount": 1.16,
+        "grossAmount": 56.16,
+        "treatmentCode": "DOMESTIC"
+      }
+    ]
+  }
+}
