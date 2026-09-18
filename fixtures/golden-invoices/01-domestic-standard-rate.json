@@ -1,0 +1,54 @@
+{
+  "id": "01-domestic-standard-rate",
+  "description": "French customer billed three advisory days at the domestic standard rate.",
+  "customer": {
+    "name": "Cabinet Marchand",
+    "countryCode": "FR",
+    "taxId": "FR12345678901",
+    "taxOverride": null,
+    "currency": "EUR"
+  },
+  "invoice": {
+    "documentNumber": "GOLD-0000",
+    "documentKind": "Invoice",
+    "invoiceDate": "2024-02-01",
+    "priceMode": "Exclusive",
+    "currency": "EUR",
+    "invoiceDiscountPercent": 0,
+    "manualTaxAmount": null,
+    "lines": [
+      {
+        "lineNumber": 1,
+        "description": "Advisory day",
+        "category": "ProfessionalServices",
+        "quantity": 3,
+        "unitPrice": 99.99,
+        "lineDiscountPercent": 0
+      }
+    ]
+  },
+  "expected": {
+    "taxTreatment": "DOMESTIC",
+    "manualOverrideApplied": false,
+    "lines": [
+      {
+        "lineNumber": 1,
+        "ratePercent": 20.0,
+        "netAmount": 299.97,
+        "taxAmount": 59.99,
+        "grossAmount": 359.96
+      }
+    ],
+    "netAmount": 299.97,
+    "taxAmount": 59.99,
+    "grossAmount": 359.96,
+    "postingAdjustment": 0.0,
+    "postedGrossAmount": 359.96,
+    "editorEstimate": {
+      "treatment": "DOMESTIC",
+      "netAmount": 299.97,
+      "taxAmount": 59.99,
+      "grossAmount": 359.96
+    }
+  }
+}

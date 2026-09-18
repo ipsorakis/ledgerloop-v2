@@ -1,0 +1,70 @@
+{
+  "id": "13-manual-tax-amount",
+  "description": "Tax amount agreed with the customer's auditor and entered by accounting; the document keeps the entered figure instead of the calculated one.",
+  "customer": {
+    "name": "Groupe Vallier",
+    "countryCode": "FR",
+    "taxId": "FR12345678901",
+    "taxOverride": null,
+    "currency": "EUR"
+  },
+  "invoice": {
+    "documentNumber": "GOLD-0000",
+    "documentKind": "Invoice",
+    "invoiceDate": "2024-07-01",
+    "priceMode": "Exclusive",
+    "currency": "EUR",
+    "invoiceDiscountPercent": 0,
+    "manualTaxAmount": 1150.0,
+    "lines": [
+      {
+        "lineNumber": 1,
+        "description": "Annual platform fee",
+        "category": "DigitalServices",
+        "quantity": 1,
+        "unitPrice": 4800.0,
+        "lineDiscountPercent": 0
+      },
+      {
+        "lineNumber": 2,
+        "description": "Data migration",
+        "category": "ProfessionalServices",
+        "quantity": 6,
+        "unitPrice": 240.0,
+        "lineDiscountPercent": 0
+      }
+    ]
+  },
+  "requiredRole": "accounting",
+  "expected": {
+    "taxTreatment": "DOMESTIC",
+    "manualOverrideApplied": true,
+    "lines": [
+      {
+        "lineNumber": 1,
+        "ratePercent": 20.0,
+        "netAmount": 4800.0,
+        "taxAmount": 960.0,
+        "grossAmount": 5760.0
+      },
+      {
+        "lineNumber": 2,
+        "ratePercent": 20.0,
+        "netAmount": 1440.0,
+        "taxAmount": 288.0,
+        "grossAmount": 1728.0
+      }
+    ],
+    "netAmount": 6240.0,
+    "taxAmount": 1150.0,
+    "grossAmount": 7390.0,
+    "postingAdjustment": 0.0,
+    "postedGrossAmount": 7390.0,
+    "editorEstimate": {
+      "treatment": "DOMESTIC",
+      "netAmount": 6240.0,
+      "taxAmount": 1150.0,
+      "grossAmount": 7390.0
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "id": "10-invoice-level-discount",
+  "description": "Framework agreement rebate applied to the whole document on top of the line prices.",
+  "customer": {
+    "name": "Groupe Vallier",
+    "countryCode": "FR",
+    "taxId": "FR12345678901",
+    "taxOverride": null,
+    "currency": "EUR"
+  },
+  "invoice": {
+    "documentNumber": "GOLD-0000",
+    "documentKind": "Invoice",
+    "invoiceDate": "2024-05-14",
+    "priceMode": "Exclusive",
+    "currency": "EUR",
+    "invoiceDiscountPercent": 7.5,
+    "manualTaxAmount": null,
+    "lines": [
+      {
+        "lineNumber": 1,
+        "description": "Managed service",
+        "category": "DigitalServices",
+        "quantity": 12,
+        "unitPrice": 149.0,
+        "lineDiscountPercent": 0
+      },
+      {
+        "lineNumber": 2,
+        "description": "Support retainer",
+        "category": "ProfessionalServices",
+        "quantity": 1,
+        "unitPrice": 900.0,
+        "lineDiscountPercent": 0
+      }
+    ]
+  },
+  "expected": {
+    "taxTreatment": "DOMESTIC",
+    "manualOverrideApplied": false,
+    "lines": [
+      {
+        "lineNumber": 1,
+        "ratePercent": 20.0,
+        "netAmount": 1653.9,
+        "taxAmount": 330.78,
+        "grossAmount": 1984.68
+      },
+      {
+        "lineNumber": 2,
+        "ratePercent": 20.0,
+        "netAmount": 832.5,
+        "taxAmount": 166.5,
+        "grossAmount": 999.0
+      }
+    ],
+    "netAmount": 2486.4,
+    "taxAmount": 497.28,
+    "grossAmount": 2983.68,
+    "postingAdjustment": 0.0,
+    "postedGrossAmount": 2983.68,
+    "editorEstimate": {
+      "treatment": "DOMESTIC",
+      "netAmount": 2486.4,
+      "taxAmount": 497.28,
+      "grossAmount": 2983.68
+    }
+  }
+}

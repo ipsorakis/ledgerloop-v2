@@ -1,0 +1,85 @@
+{
+  "id": "15-one-cent-sensitive-total",
+  "description": "Three food staple lines that each land on a half cent of tax. The ledger figure and the editor estimate differ by one cent on this document; the ledger figure is the one that is stored.",
+  "customer": {
+    "name": "Epicerie Vasseur",
+    "countryCode": "FR",
+    "taxId": "FR12345678901",
+    "taxOverride": null,
+    "currency": "EUR"
+  },
+  "invoice": {
+    "documentNumber": "GOLD-0000",
+    "documentKind": "Invoice",
+    "invoiceDate": "2024-09-02",
+    "priceMode": "Exclusive",
+    "currency": "EUR",
+    "invoiceDiscountPercent": 0,
+    "manualTaxAmount": null,
+    "lines": [
+      {
+        "lineNumber": 1,
+        "description": "Flour, 25kg",
+        "category": "FoodStaples",
+        "quantity": 1,
+        "unitPrice": 55.0,
+        "lineDiscountPercent": 0
+      },
+      {
+        "lineNumber": 2,
+        "description": "Sugar, 25kg",
+        "category": "FoodStaples",
+        "quantity": 1,
+        "unitPrice": 55.0,
+        "lineDiscountPercent": 0
+      },
+      {
+        "lineNumber": 3,
+        "description": "Rice, 25kg",
+        "category": "FoodStaples",
+        "quantity": 1,
+        "unitPrice": 55.0,
+        "lineDiscountPercent": 0
+      }
+    ]
+  },
+  "notes": "Accepted difference: the editor totals the unrounded line tax and rounds once, the ledger rounds each line.",
+  "expected": {
+    "taxTreatment": "DOMESTIC",
+    "manualOverrideApplied": false,
+    "lines": [
+      {
+        "lineNumber": 1,
+        "ratePercent": 2.1,
+        "netAmount": 55.0,
+        "taxAmount": 1.16,
+        "grossAmount": 56.16
+      },
+      {
+        "lineNumber": 2,
+        "ratePercent": 2.1,
+        "netAmount": 55.0,
+        "taxAmount": 1.16,
+        "grossAmount": 56.16
+      },
+      {
+        "lineNumber": 3,
+        "ratePercent": 2.1,
+        "netAmount": 55.0,
+        "taxAmount": 1.16,
+        "grossAmount": 56.16
+      }
+    ],
+    "netAmount": 165.0,
+    "taxAmount": 3.48,
+    "grossAmount": 168.48,
+    "postingAdjustment": 0.0,
+    "postedGrossAmount": 168.48,
+    "editorEstimate": {
+      "treatment": "DOMESTIC",
+      "netAmount": 165.0,
+      "taxAmount": 3.47,
+      "grossAmount": 168.47
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "id": "08-exclusive-pricing",
+  "description": "Same retail bundle captured at net prices for comparison with the inclusive case.",
+  "customer": {
+    "name": "Studio Delacroix SARL",
+    "countryCode": "FR",
+    "taxId": "FR98765432109",
+    "taxOverride": null,
+    "currency": "EUR"
+  },
+  "invoice": {
+    "documentNumber": "GOLD-0000",
+    "documentKind": "Invoice",
+    "invoiceDate": "2024-02-20",
+    "priceMode": "Exclusive",
+    "currency": "EUR",
+    "invoiceDiscountPercent": 0,
+    "manualTaxAmount": null,
+    "lines": [
+      {
+        "lineNumber": 1,
+        "description": "Printed handbook",
+        "category": "PrintedBooks",
+        "quantity": 12,
+        "unitPrice": 14.99,
+        "lineDiscountPercent": 0
+      },
+      {
+        "lineNumber": 2,
+        "description": "Delivery",
+        "category": "Shipping",
+        "quantity": 1,
+        "unitPrice": 9.9,
+        "lineDiscountPercent": 0
+      }
+    ]
+  },
+  "expected": {
+    "taxTreatment": "DOMESTIC",
+    "manualOverrideApplied": false,
+    "lines": [
+      {
+        "lineNumber": 1,
+        "ratePercent": 10.0,
+        "netAmount": 179.88,
+        "taxAmount": 17.99,
+        "grossAmount": 197.87
+      },
+      {
+        "lineNumber": 2,
+        "ratePercent": 20.0,
+        "netAmount": 9.9,
+        "taxAmount": 1.98,
+        "grossAmount": 11.88
+      }
+    ],
+    "netAmount": 189.78,
+    "taxAmount": 19.97,
+    "grossAmount": 209.75,
+    "postingAdjustment": 0.0,
+    "postedGrossAmount": 209.75,
+    "editorEstimate": {
+      "treatment": "DOMESTIC",
+      "netAmount": 189.78,
+      "taxAmount": 19.97,
+      "grossAmount": 209.75
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "id": "12-historical-reduced-rate",
+  "description": "Late correction for a 2022 period: printed books are resolved with the reduced rate that applied before the 2023 revision, and the document carries the transitional posting adjustment.",
+  "customer": {
+    "name": "Librairie Central",
+    "countryCode": "FR",
+    "taxId": "FR98765432109",
+    "taxOverride": null,
+    "currency": "EUR"
+  },
+  "invoice": {
+    "documentNumber": "GOLD-0000",
+    "documentKind": "Invoice",
+    "invoiceDate": "2022-05-09",
+    "priceMode": "Exclusive",
+    "currency": "EUR",
+    "invoiceDiscountPercent": 0,
+    "manualTaxAmount": null,
+    "lines": [
+      {
+        "lineNumber": 1,
+        "description": "Trade paperback",
+        "category": "PrintedBooks",
+        "quantity": 40,
+        "unitPrice": 12.5,
+        "lineDiscountPercent": 0
+      }
+    ]
+  },
+  "notes": "The editor estimate uses the current reduced rate, so it is materially higher than the ledger figure for this period.",
+  "expected": {
+    "taxTreatment": "DOMESTIC",
+    "manualOverrideApplied": false,
+    "lines": [
+      {
+        "lineNumber": 1,
+        "ratePercent": 7.0,
+        "netAmount": 500.0,
+        "taxAmount": 35.0,
+        "grossAmount": 535.0
+      }
+    ],
+    "netAmount": 500.0,
+    "taxAmount": 35.0,
+    "grossAmount": 535.0,
+    "postingAdjustment": 0.18,
+    "postedGrossAmount": 535.18,
+    "editorEstimate": {
+      "treatment": "DOMESTIC",
+      "netAmount": 500.0,
+      "taxAmount": 50.0,
+      "grossAmount": 550.0
+    }
+  }
+}

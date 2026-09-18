@@ -1,0 +1,54 @@
+{
+  "id": "05-reverse-charge-eu",
+  "description": "German business customer with a well formed tax identifier, so the document is issued without tax and the customer accounts for it.",
+  "customer": {
+    "name": "Nordwind Logistik GmbH",
+    "countryCode": "DE",
+    "taxId": "DE123456789",
+    "taxOverride": null,
+    "currency": "EUR"
+  },
+  "invoice": {
+    "documentNumber": "GOLD-0000",
+    "documentKind": "Invoice",
+    "invoiceDate": "2024-04-05",
+    "priceMode": "Exclusive",
+    "currency": "EUR",
+    "invoiceDiscountPercent": 0,
+    "manualTaxAmount": null,
+    "lines": [
+      {
+        "lineNumber": 1,
+        "description": "Implementation support",
+        "category": "ProfessionalServices",
+        "quantity": 16,
+        "unitPrice": 97.5,
+        "lineDiscountPercent": 0
+      }
+    ]
+  },
+  "expected": {
+    "taxTreatment": "REVERSE_CHARGE",
+    "manualOverrideApplied": false,
+    "lines": [
+      {
+        "lineNumber": 1,
+        "ratePercent": 0.0,
+        "netAmount": 1560.0,
+        "taxAmount": 0.0,
+        "grossAmount": 1560.0
+      }
+    ],
+    "netAmount": 1560.0,
+    "taxAmount": 0.0,
+    "grossAmount": 1560.0,
+    "postingAdjustment": 0.0,
+    "postedGrossAmount": 1560.0,
+    "editorEstimate": {
+      "treatment": "REVERSE_CHARGE",
+      "netAmount": 1560.0,
+      "taxAmount": 0.0,
+      "grossAmount": 1560.0
+    }
+  }
+}

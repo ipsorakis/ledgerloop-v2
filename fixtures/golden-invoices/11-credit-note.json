@@ -1,0 +1,54 @@
+{
+  "id": "11-credit-note",
+  "description": "Credit note issued for a cancelled workshop; the document mirrors the invoice line with reversed amounts.",
+  "customer": {
+    "name": "Boulangerie Lemaire",
+    "countryCode": "FR",
+    "taxId": "FR12345678901",
+    "taxOverride": null,
+    "currency": "EUR"
+  },
+  "invoice": {
+    "documentNumber": "GOLD-0000",
+    "documentKind": "CreditNote",
+    "invoiceDate": "2022-03-14",
+    "priceMode": "Exclusive",
+    "currency": "EUR",
+    "invoiceDiscountPercent": 0,
+    "manualTaxAmount": null,
+    "lines": [
+      {
+        "lineNumber": 1,
+        "description": "Onboarding workshop",
+        "category": "ProfessionalServices",
+        "quantity": 1,
+        "unitPrice": 320.0,
+        "lineDiscountPercent": 0
+      }
+    ]
+  },
+  "expected": {
+    "taxTreatment": "DOMESTIC",
+    "manualOverrideApplied": false,
+    "lines": [
+      {
+        "lineNumber": 1,
+        "ratePercent": 20.0,
+        "netAmount": -320.0,
+        "taxAmount": -64.0,
+        "grossAmount": -384.0
+      }
+    ],
+    "netAmount": -320.0,
+    "taxAmount": -64.0,
+    "grossAmount": -384.0,
+    "postingAdjustment": -0.32,
+    "postedGrossAmount": -384.32,
+    "editorEstimate": {
+      "treatment": "DOMESTIC",
+      "netAmount": -320.0,
+      "taxAmount": -64.0,
+      "grossAmount": -384.0
+    }
+  }
+}

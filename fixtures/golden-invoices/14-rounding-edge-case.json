@@ -1,0 +1,69 @@
+{
+  "id": "14-rounding-edge-case",
+  "description": "Unit price with a third decimal: the line lands exactly on a half cent in both the net and the tax figure.",
+  "customer": {
+    "name": "Atelier Perrin",
+    "countryCode": "FR",
+    "taxId": "FR12345678901",
+    "taxOverride": null,
+    "currency": "EUR"
+  },
+  "invoice": {
+    "documentNumber": "GOLD-0000",
+    "documentKind": "Invoice",
+    "invoiceDate": "2024-08-06",
+    "priceMode": "Exclusive",
+    "currency": "EUR",
+    "invoiceDiscountPercent": 0,
+    "manualTaxAmount": null,
+    "lines": [
+      {
+        "lineNumber": 1,
+        "description": "Fastener pack",
+        "category": "StandardGoods",
+        "quantity": 3,
+        "unitPrice": 3.335,
+        "lineDiscountPercent": 0
+      },
+      {
+        "lineNumber": 2,
+        "description": "Assembly labour",
+        "category": "ProfessionalServices",
+        "quantity": 1,
+        "unitPrice": 0.125,
+        "lineDiscountPercent": 0
+      }
+    ]
+  },
+  "expected": {
+    "taxTreatment": "DOMESTIC",
+    "manualOverrideApplied": false,
+    "lines": [
+      {
+        "lineNumber": 1,
+        "ratePercent": 20.0,
+        "netAmount": 10.01,
+        "taxAmount": 2.0,
+        "grossAmount": 12.01
+      },
+      {
+        "lineNumber": 2,
+        "ratePercent": 20.0,
+        "netAmount": 0.13,
+        "taxAmount": 0.03,
+        "grossAmount": 0.16
+      }
+    ],
+    "netAmount": 10.14,
+    "taxAmount": 2.03,
+    "grossAmount": 12.17,
+    "postingAdjustment": 0.0,
+    "postedGrossAmount": 12.17,
+    "editorEstimate": {
+      "treatment": "DOMESTIC",
+      "netAmount": 10.13,
+      "taxAmount": 2.03,
+      "grossAmount": 12.16
+    }
+  }
+}

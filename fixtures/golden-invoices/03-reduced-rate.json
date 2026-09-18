@@ -1,0 +1,54 @@
+{
+  "id": "03-reduced-rate",
+  "description": "Printed books only, so the whole document is taxed at the domestic reduced rate.",
+  "customer": {
+    "name": "Librairie Central",
+    "countryCode": "FR",
+    "taxId": "FR98765432109",
+    "taxOverride": null,
+    "currency": "EUR"
+  },
+  "invoice": {
+    "documentNumber": "GOLD-0000",
+    "documentKind": "Invoice",
+    "invoiceDate": "2024-03-11",
+    "priceMode": "Exclusive",
+    "currency": "EUR",
+    "invoiceDiscountPercent": 0,
+    "manualTaxAmount": null,
+    "lines": [
+      {
+        "lineNumber": 1,
+        "description": "Trade paperback",
+        "category": "PrintedBooks",
+        "quantity": 40,
+        "unitPrice": 12.5,
+        "lineDiscountPercent": 0
+      }
+    ]
+  },
+  "expected": {
+    "taxTreatment": "DOMESTIC",
+    "manualOverrideApplied": false,
+    "lines": [
+      {
+        "lineNumber": 1,
+        "ratePercent": 10.0,
+        "netAmount": 500.0,
+        "taxAmount": 50.0,
+        "grossAmount": 550.0
+      }
+    ],
+    "netAmount": 500.0,
+    "taxAmount": 50.0,
+    "grossAmount": 550.0,
+    "postingAdjustment": 0.0,
+    "postedGrossAmount": 550.0,
+    "editorEstimate": {
+      "treatment": "DOMESTIC",
+      "netAmount": 500.0,
+      "taxAmount": 50.0,
+      "grossAmount": 550.0
+    }
+  }
+}

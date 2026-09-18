@@ -1,0 +1,84 @@
+{
+  "id": "02-mixed-rates",
+  "description": "Domestic invoice combining standard goods, printed books and food staples so three different rates appear on one document.",
+  "customer": {
+    "name": "Epicerie Vasseur",
+    "countryCode": "FR",
+    "taxId": "FR12345678901",
+    "taxOverride": null,
+    "currency": "EUR"
+  },
+  "invoice": {
+    "documentNumber": "GOLD-0000",
+    "documentKind": "Invoice",
+    "invoiceDate": "2024-03-04",
+    "priceMode": "Exclusive",
+    "currency": "EUR",
+    "invoiceDiscountPercent": 0,
+    "manualTaxAmount": null,
+    "lines": [
+      {
+        "lineNumber": 1,
+        "description": "Shelving units",
+        "category": "StandardGoods",
+        "quantity": 2,
+        "unitPrice": 250.0,
+        "lineDiscountPercent": 0
+      },
+      {
+        "lineNumber": 2,
+        "description": "Recipe handbook",
+        "category": "PrintedBooks",
+        "quantity": 10,
+        "unitPrice": 19.9,
+        "lineDiscountPercent": 0
+      },
+      {
+        "lineNumber": 3,
+        "description": "Flour sacks",
+        "category": "FoodStaples",
+        "quantity": 8,
+        "unitPrice": 3.55,
+        "lineDiscountPercent": 0
+      }
+    ]
+  },
+  "expected": {
+    "taxTreatment": "DOMESTIC",
+    "manualOverrideApplied": false,
+    "lines": [
+      {
+        "lineNumber": 1,
+        "ratePercent": 20.0,
+        "netAmount": 500.0,
+        "taxAmount": 100.0,
+        "grossAmount": 600.0
+      },
+      {
+        "lineNumber": 2,
+        "ratePercent": 10.0,
+        "netAmount": 199.0,
+        "taxAmount": 19.9,
+        "grossAmount": 218.9
+      },
+      {
+        "lineNumber": 3,
+        "ratePercent": 2.1,
+        "netAmount": 28.4,
+        "taxAmount": 0.6,
+        "grossAmount": 29.0
+      }
+    ],
+    "netAmount": 727.4,
+    "taxAmount": 120.5,
+    "grossAmount": 847.9,
+    "postingAdjustment": 0.0,
+    "postedGrossAmount": 847.9,
+    "editorEstimate": {
+      "treatment": "DOMESTIC",
+      "netAmount": 727.4,
+      "taxAmount": 120.5,
+      "grossAmount": 847.9
+    }
+  }
+}

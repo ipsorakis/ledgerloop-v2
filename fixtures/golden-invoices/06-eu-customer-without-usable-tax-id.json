@@ -1,0 +1,69 @@
+{
+  "id": "06-eu-customer-without-usable-tax-id",
+  "description": "German clinic whose tax identifier is still incomplete on the customer record; the document is billed as a domestic sale.",
+  "customer": {
+    "name": "Hansa Kliniken GmbH",
+    "countryCode": "DE",
+    "taxId": "DE1234",
+    "taxOverride": null,
+    "currency": "EUR"
+  },
+  "invoice": {
+    "documentNumber": "GOLD-0000",
+    "documentKind": "Invoice",
+    "invoiceDate": "2024-01-18",
+    "priceMode": "Exclusive",
+    "currency": "EUR",
+    "invoiceDiscountPercent": 0,
+    "manualTaxAmount": null,
+    "lines": [
+      {
+        "lineNumber": 1,
+        "description": "Sterile dressing packs",
+        "category": "MedicalSupplies",
+        "quantity": 40,
+        "unitPrice": 12.35,
+        "lineDiscountPercent": 0
+      },
+      {
+        "lineNumber": 2,
+        "description": "Cold chain transport",
+        "category": "Shipping",
+        "quantity": 1,
+        "unitPrice": 85.0,
+        "lineDiscountPercent": 0
+      }
+    ]
+  },
+  "expected": {
+    "taxTreatment": "DOMESTIC",
+    "manualOverrideApplied": false,
+    "lines": [
+      {
+        "lineNumber": 1,
+        "ratePercent": 10.0,
+        "netAmount": 494.0,
+        "taxAmount": 49.4,
+        "grossAmount": 543.4
+      },
+      {
+        "lineNumber": 2,
+        "ratePercent": 20.0,
+        "netAmount": 85.0,
+        "taxAmount": 17.0,
+        "grossAmount": 102.0
+      }
+    ],
+    "netAmount": 579.0,
+    "taxAmount": 66.4,
+    "grossAmount": 645.4,
+    "postingAdjustment": 0.0,
+    "postedGrossAmount": 645.4,
+    "editorEstimate": {
+      "treatment": "DOMESTIC",
+      "netAmount": 579.0,
+      "taxAmount": 66.4,
+      "grossAmount": 645.4
+    }
+  }
+}

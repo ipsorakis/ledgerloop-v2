@@ -1,0 +1,25 @@
+# .NET
+bin/
+obj/
+*.user
+artifacts/
+TestResults/
+*.trx
+
+# Node
+node_modules/
+dist/
+.vite/
+npm-debug.log*
+
+# Tooling
+.vs/
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Local configuration
+appsettings.Local.json
+.env
+.env.local

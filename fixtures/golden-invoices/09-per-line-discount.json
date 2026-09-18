@@ -1,0 +1,69 @@
+{
+  "id": "09-per-line-discount",
+  "description": "Licence line carries a negotiated discount while the services line is billed in full.",
+  "customer": {
+    "name": "Nordwind Services SAS",
+    "countryCode": "FR",
+    "taxId": "FR40303265045",
+    "taxOverride": null,
+    "currency": "EUR"
+  },
+  "invoice": {
+    "documentNumber": "GOLD-0000",
+    "documentKind": "Invoice",
+    "invoiceDate": "2024-05-02",
+    "priceMode": "Exclusive",
+    "currency": "EUR",
+    "invoiceDiscountPercent": 0,
+    "manualTaxAmount": null,
+    "lines": [
+      {
+        "lineNumber": 1,
+        "description": "Integration engineering",
+        "category": "ProfessionalServices",
+        "quantity": 24,
+        "unitPrice": 118.0,
+        "lineDiscountPercent": 0
+      },
+      {
+        "lineNumber": 2,
+        "description": "Connector licence",
+        "category": "DigitalServices",
+        "quantity": 1,
+        "unitPrice": 1450.0,
+        "lineDiscountPercent": 12.5
+      }
+    ]
+  },
+  "expected": {
+    "taxTreatment": "DOMESTIC",
+    "manualOverrideApplied": false,
+    "lines": [
+      {
+        "lineNumber": 1,
+        "ratePercent": 20.0,
+        "netAmount": 2832.0,
+        "taxAmount": 566.4,
+        "grossAmount": 3398.4
+      },
+      {
+        "lineNumber": 2,
+        "ratePercent": 20.0,
+        "netAmount": 1268.75,
+        "taxAmount": 253.75,
+        "grossAmount": 1522.5
+      }
+    ],
+    "netAmount": 4100.75,
+    "taxAmount": 820.15,
+    "grossAmount": 4920.9,
+    "postingAdjustment": 0.0,
+    "postedGrossAmount": 4920.9,
+    "editorEstimate": {
+      "treatment": "DOMESTIC",
+      "netAmount": 4100.75,
+      "taxAmount": 820.15,
+      "grossAmount": 4920.9
+    }
+  }
+}
